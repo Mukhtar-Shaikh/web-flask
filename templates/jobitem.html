@@ -1,0 +1,17 @@
+<div class="border-bottom  mx-auto p-2 row" style="color: rgb(130,130 ,130);">
+    <div class="col-8">
+        <h5>{{job['role'].upper()}} </h5>
+        <div><b>LOCATION </b>: {{job['location'].upper()}} </div>
+
+        <div>
+            {% if 'salary' in job %}
+            <b>Salary</b> : {{job['salary']}}
+            {% endif %}
+        </div>
+
+    </div >
+    <div class="col-4">
+        <button type="button" class="btn btn-outline-primary">Apply</button>
+    </div>
+    
+</div>

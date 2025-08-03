@@ -13,7 +13,7 @@
 
 <body>
     <style>
-        #banner{
+        #banner {
             width: 600px;
             height: 500px;
         }
@@ -26,18 +26,20 @@
             this is my first web application using flask to build clinic
 
         </p>
-        <img id ="banner" src='http://127.0.0.1:5000/static/clinic.avif' class="rounded float-end" width='500 ' height='500 ' />
+        <img id =" banner" src='http://127.0.0.1:5000/static/clinic.avif' class="rounded float-end" width='500 '
+            height='500 ' />
         <h2>Positions</h2>
-        <p><ul>
+        <div   >
             {% for job in jobs %}
-                <li>{{job}} </li>
+              {% include 'jobitem.html' %}
             {% endfor %}
+        </div>
 
-        </ul>
-            
-        </p>
+
+
         <h2>About</h2>
-        <p class="text-centery mb-2 mt-3 mr-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+        <p class="text-centery mb-2 mt-3 mr-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+            ligula eget dolor. Aenean massa. Cum
             sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
             ultricies
             nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
